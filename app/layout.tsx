@@ -1,5 +1,7 @@
+import Profiles from '@/components/profile'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import BottomTab from './components/BottomTab'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +18,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <Profiles />
+
+        <div className="top-[18rem]">
+          <div className="ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300">
+            {/* Conditionally render the appropriate content based on the active tab */}
+              
+            {children}
+
+          </div>
+        </div>
+        <BottomTab />
       </body>
     </html>
   )

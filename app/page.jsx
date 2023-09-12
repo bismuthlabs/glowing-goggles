@@ -1,11 +1,11 @@
-import Profiles from '@/components/profile'
-import ProfileNavStick from '@/components/ProfileNavStick'
+
+import Contacts from './components/contacts'
 
 export default function Home() {
   return (
     <main className="max-w-[768px] h-full m-auto relative">
       <div className=''>
-          <ProfileNavStick />
+        <Contacts />
       </div>
     </main>
   )
